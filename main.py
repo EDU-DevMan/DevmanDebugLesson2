@@ -21,11 +21,11 @@ phenomenon_description = new_event.get_phenomenon()
 sms_template = '''{town_title}: {event_time} {event_date} {event_area} ожидается {phenomenon_description}. Будьте внимательны и осторожны.'''
 
 sms_message = sms_template.format(
-    phenomenon_description,
-    town_title,
-    event_time,
-    event_date,
-    event_area,
+    phenomenon_description=phenomenon_description,
+    town_title=town_title,
+    event_time=event_time,
+    event_date=event_date,
+    event_area=event_area,
 )
 
 server.send(sms_message)
@@ -116,3 +116,9 @@ server.send(sms_message)
 # Код для проверки: Попробовать круглые иил квадратные скобки ()...[]
 # Установленный факт: Нужно указывать перменные в фигурных скобках {}
 # Вывод: Гипотеза не подтвердилась
+
+# Гипотеза 8: Возможно неоходимо передается в качестве аргумента - ключевые слова 
+# Способ проверки: Прочитать документацию по .format() - еще разок
+# Код для проверки: Попробвать передать аргументы в качевте ключевого слова
+# Установленный факт: Например town_title=town_title и т.д.
+# Вывод: Гипотеза подтвердилась, код работает
