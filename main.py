@@ -20,14 +20,6 @@ phenomenon_description = new_event.get_phenomenon()
 
 sms_template = '''{town_title}: {event_time} {event_date} {event_area} ожидается {phenomenon_description}. Будьте внимательны и осторожны.'''
 
-print(event_time)
-
-print(event_date)
-
-print(event_area)
-
-print(phenomenon_description)
-
 sms_message = sms_template.format(
     phenomenon_description,
     town_title,
@@ -117,4 +109,10 @@ server.send(sms_message)
 # Способ проверки: Среда разработки, например VS Code + Flake8
 # Код для проверки: Необъявленные перменные обычно подчеркнуты желтой волнисто линией
 # Установленный факт: Опечатки отсутствуют
+# Вывод: Гипотеза не подтвердилась
+
+# Гипотеза 7: Возможно названия переменных надо указывать не в фигурных скобках
+# Способ проверки: Прочитать документацию по .format() - как необходимо работать с переменными
+# Код для проверки: Попробовать круглые иил квадратные скобки ()...[]
+# Установленный факт: Нужно указывать перменные в фигурных скобках {}
 # Вывод: Гипотеза не подтвердилась
