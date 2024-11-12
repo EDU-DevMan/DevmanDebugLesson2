@@ -1,6 +1,10 @@
 import os
 
+from dotenv import load_dotenv
 from weather_sdk import get_new_event, SMSServer
+
+
+load_dotenv()
 
 token = os.getenv('FORECAST_TOKEN')
 town_title = 'Курск'
