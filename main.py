@@ -16,6 +16,8 @@ phenomenon_description = new_event.get_phenomenon()
 
 sms_template = '''{town_title}: {event_time} {event_date} {event_area} ожидается {phenomenon_description}. Будьте внимательны и осторожны.'''
 
+print("new_event", new_event)
+
 sms_message = sms_template.format(
     phenomenon_description,
     town_title,
@@ -29,8 +31,10 @@ server.send(sms_message)
 # Гипотеза 1: В переменной нет прогноза погоды для Курска
 # Способ проверки: Выведу переменную new_event
 # Код для проверки: print(new_event)
-# Установленный факт: ...
-# Вывод: ...
+# Установленный факт: print("new_event: ", new_event) > new_event:
+# Регион:  Погода:
+# Вывод: Гипотеза подтвердилась, в переменной new_event отсутствуют данные,
+# необходим следующий шаг
 
 # Гипотеза 2.1: town_title на самом деле пуста
 # Способ проверки: ...
