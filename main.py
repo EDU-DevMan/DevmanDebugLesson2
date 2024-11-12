@@ -16,7 +16,8 @@ phenomenon_description = new_event.get_phenomenon()
 
 sms_template = '''{town_title}: {event_time} {event_date} {event_area} ожидается {phenomenon_description}. Будьте внимательны и осторожны.'''
 
-print("new_event", new_event)
+print("town_title: ", town_title)
+
 
 sms_message = sms_template.format(
     phenomenon_description,
@@ -37,13 +38,13 @@ server.send(sms_message)
 # необходим следующий шаг
 
 # Гипотеза 2.1: town_title на самом деле пуста
-# Способ проверки: ...
-# Код для проверки: ...
-# Установленный факт: ...
-# Вывод: ...
+# Способ проверки: Выведу переменную town_title
+# Код для проверки: print(town_title)
+# Установленный факт: print("town_title: ", town_title) > town_title:  Курск
+# Вывод: Гипотеза не подтвердилась переменная не пуста
 
 # Гипотеза 2.2: В town_title не название города
-# Способ проверки: ...
-# Код для проверки: ...
-# Установленный факт: ...
-# Вывод: ...
+# Способ проверки: ыведу переменную town_title
+# Код для проверки: print(town_title)
+# Установленный факт: print("town_title: ", town_title) > town_title:  Курск
+# Вывод: Гипотеза не подтвердилась, в переменной содержится город Курск
